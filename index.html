@@ -3,20 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- ════════════════════════════════════════════════════════════════
-     BEST SELLER — SALES PAGE v4 (Scale Your Resonance)
-     Cohesive "modern but cool" system distilled from 3 references
-     (Site Series Sprint · The Copy Cure · Jenna Kutcher Podcast Lab):
-     • Square edges everywhere · Loubag Black display (embedded)
-     • Color-rooms via section backgrounds; content in cards/boxes
-     • Light sections: multi-color cards w/ thin PLUM outlines
-     • GREEN ROOMS (olive/foliage): borderless white cards + butter
-       sub-boxes; plum text lives on the light boxes (never on green)
-     • Moss = green TEXT accent only (limited) · chartreuse highlighter
-     • Mono eyebrows · square color tabs · marquee dividers · arches
-     Updated palette per client swatches.
-     ⟢ SWAP = drop in real asset / confirm before publish.
-     ════════════════════════════════════════════════════════════════ -->
+<!-- BEST SELLER — SALES PAGE v5 (Scale Your Resonance)
+     Backgrounds: butter / daisy only (peony where it earns it, with light cards inside).
+     Color recipes per bg, square edges, circle checks, thin varied outlines,
+     Loubag ONLY on section headlines (card headings = Work Sans). -->
 <title>Best Seller — Turn Your List Into Your Most Consistent Source of Sales</title>
 <meta name="description" content="Best Seller is the 6-month membership where coaches, creators, and service providers build a complete email strategy that converts their list into consistent sales.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +18,7 @@
 :root{
   --ink:#60183a; --muted:#774159;
   --moss:#2C4827; --olive:#a1a423; --foliage:#B1B427; --chartreuse:#F1FF4E;
-  --bubblegum:#FFC2EA; --orangeade:#FF9944; --peony:#822049;
+  --bubblegum:#FFC2EA; --orange:#e97f0d; --peony:#822049; --lavender:#ce94c4;
   --butter:#F9E7A6; --daisy:#FFFBE7; --white:#fff;
   --body:'Work Sans',system-ui,sans-serif;
   --mono:'DM Mono',ui-monospace,monospace;
@@ -37,201 +27,185 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:var(--body);background:var(--daisy);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.narrow{max-width:780px;margin:0 auto}
 
-/* Type */
-h1,h2,.display{font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:-0.01em}
-h1{font-size:clamp(2.7rem,1.6rem + 5vw,5.6rem);line-height:0.94}
-h2{font-size:clamp(2.1rem,1.45rem + 2.9vw,3.9rem);line-height:0.98}
-h3{font-weight:800;font-size:clamp(1.2rem,1.05rem + 0.7vw,1.5rem);line-height:1.2}
+/* Section headlines = Loubag only */
+h1,h2,.section-h{font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:-0.01em}
+h1{font-size:clamp(2.7rem,1.6rem + 5vw,5.4rem);line-height:0.94}
+h2{font-size:clamp(2.1rem,1.45rem + 2.9vw,3.8rem);line-height:0.98}
+/* Card headings = Work Sans */
+h3,h4{font-family:var(--body);font-weight:800;line-height:1.2}
+h3{font-size:clamp(1.2rem,1.05rem + 0.7vw,1.5rem)}
 p{font-size:clamp(1rem,0.97rem + 0.18vw,1.125rem);line-height:1.6}
 .lead{font-size:clamp(1.125rem,1rem + 0.55vw,1.4rem);line-height:1.5}
 .eyebrow{font-family:var(--mono);font-weight:500;text-transform:uppercase;letter-spacing:0.2em;font-size:0.8rem;color:var(--peony)}
 .small{font-size:0.875rem;line-height:1.5}
-strong,b{font-weight:800;color:var(--ink)}
+strong,b{font-weight:800;color:inherit}
 .hl{background:var(--chartreuse);padding:0 .08em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.o{color:var(--orangeade)} .pe{color:var(--peony)} .ms{color:var(--moss)}
+.o{color:var(--orange)} .pe{color:var(--peony)} .ms{color:var(--moss)} .lav{color:var(--lavender)}
 
 /* Buttons — square */
 .btn{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:clamp(1rem,0.95rem + 0.25vw,1.1875rem);
-  border:2.5px solid var(--ink);background:var(--orangeade);color:var(--ink);padding:16px 34px;cursor:pointer;min-height:56px;
+  border:2px solid var(--ink);background:var(--orange);color:var(--ink);padding:16px 34px;cursor:pointer;min-height:54px;
   text-decoration:none;transition:transform .12s ease;line-height:1.1;text-align:center}
 .btn:hover{transform:translate(-1px,-1px)}
 .btn svg{width:20px;height:20px;flex:none}
 .btn-sub{display:block;margin-top:12px;font-size:0.875rem;font-weight:600;color:var(--muted)}
 
-/* Sections */
-section{padding:clamp(58px,5.5vw,104px) 0;position:relative}
-.sec-head{text-align:center;max-width:880px;margin:0 auto clamp(34px,4vw,52px)}
+section{padding:clamp(54px,5vw,96px) 0;position:relative}
+.sec-head{text-align:center;max-width:880px;margin:0 auto clamp(32px,4vw,50px)}
 .sec-head .eyebrow{display:block;margin-bottom:14px}
 .sec-head p{margin-top:18px;color:var(--muted)}
-.bg-daisy{background:var(--daisy)} .bg-white{background:var(--white)}
-.bg-butter{background:var(--butter)} .bg-bubblegum{background:var(--bubblegum)}
-.bg-olive{background:var(--olive)} .bg-foliage{background:var(--foliage)}
+.bg-daisy{background:var(--daisy)} .bg-butter{background:var(--butter)} .bg-peony{background:var(--peony)}
+.center-cta{text-align:center;margin-top:clamp(34px,4vw,50px)}
+
+/* circle check (used everywhere) */
+.ck{flex:none;width:24px;height:24px;border-radius:50%;background:var(--olive);display:flex;align-items:center;justify-content:center;margin-top:1px}
+.ck svg{width:13px;height:13px;color:#fff}
 
 /* Marquee */
-.marquee{overflow:hidden;white-space:nowrap;padding:11px 0;border-top:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink)}
-.marquee.m-pink{background:var(--bubblegum)} .marquee.m-orange{background:var(--orangeade)}
-.marquee .track{display:inline-block;animation:scroll 28s linear infinite;font-family:var(--display);font-weight:900;font-size:1.15rem;color:var(--ink);text-transform:uppercase}
+.marquee{overflow:hidden;white-space:nowrap;padding:11px 0;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.marquee.m-pink{background:var(--bubblegum)} .marquee.m-orange{background:var(--orange)}
+.marquee .track{display:inline-block;animation:scroll 28s linear infinite;font-family:var(--display);font-weight:900;font-size:1.1rem;color:var(--ink);text-transform:uppercase}
 .marquee .track span{margin:0 6px} .marquee .track .d{color:var(--peony)}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.marquee .track{animation:none}}
 
-/* Hero */
-.hero{padding-top:clamp(48px,5vw,76px);position:relative;overflow:hidden}
-.hero .grid{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(28px,4vw,52px);align-items:center}
-.hero h1{margin:16px 0 20px}
-.hero .lead{color:var(--ink);max-width:440px;font-weight:500;margin-bottom:24px}
-.hero .proof{margin-top:20px;border-top:2px solid rgba(96,24,58,.18);padding-top:16px;max-width:420px}
-.hero .stars{color:var(--orangeade);letter-spacing:2px;font-size:1rem;margin-bottom:5px}
+/* HERO — full width, no image */
+.hero{text-align:center;padding-top:clamp(52px,5vw,84px)}
+.hero h1{margin:16px auto 20px;max-width:14ch}
+.hero .lead{color:var(--ink);max-width:680px;margin:0 auto 26px;font-weight:500}
+.hero .proof{margin:22px auto 0;max-width:460px;border-top:2px solid rgba(96,24,58,.18);padding-top:16px}
+.hero .stars{color:var(--orange);letter-spacing:2px;font-size:1.05rem;margin-bottom:5px}
 .hero .proof p{font-size:0.95rem;font-style:italic;color:var(--ink)}
 .hero .proof b{font-style:normal}
-.hero .art{position:relative;display:flex;justify-content:center;align-items:center;min-height:340px}
-.hero .arch{position:absolute;width:300px;height:300px;background:var(--foliage);border-radius:50%;top:0;right:6%;z-index:0}
-.hero .photo{position:relative;z-index:1;width:255px;height:320px;background:var(--bubblegum);border:3px solid var(--ink);
-  display:flex;align-items:center;justify-content:center;text-align:center;color:var(--ink);font-weight:600;padding:14px}
-.hero .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero .stamp{position:absolute;z-index:2;bottom:14px;left:8%;width:74px;height:74px;background:var(--olive);border:3px solid var(--ink);
-  border-radius:50%;display:flex;align-items:center;justify-content:center}
-.hero .stamp svg{width:30px;height:30px;color:var(--daisy)}
-@media(max-width:760px){.hero .grid{grid-template-columns:1fr}.hero .art{order:-1;min-height:300px}}
 
-/* Editorial symptom list (butter room) */
+/* SYMPTOMS — editorial list, circle ✕ in bubblegum */
 .sym{max-width:920px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:0 44px}
 @media(max-width:680px){.sym{grid-template-columns:1fr}}
-.sym .row{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-bottom:2px solid rgba(96,24,58,.18)}
-.sym .row .mk{flex:none;width:26px;height:26px;background:var(--peony);color:var(--daisy);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.85rem;margin-top:2px}
-.sym .row:nth-child(2n) .mk{background:var(--orangeade);color:var(--ink)}
+.sym .row{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-bottom:1.5px solid rgba(96,24,58,.2)}
+.sym .row .mk{flex:none;width:28px;height:28px;border-radius:50%;background:var(--bubblegum);border:1.5px solid var(--ink);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.9rem;margin-top:2px}
 .sym .row p{font-size:1.0625rem;font-weight:500;color:var(--ink)}
 .emoji-row{text-align:center;font-size:2rem;margin-top:28px;letter-spacing:10px}
 
-/* Color cards (light sections) — square, plum outline */
+/* CONSEQUENCE cards — bubblegum / plum / lavender / orange, thin varied outlines */
 .cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;max-width:1040px;margin:0 auto}
-.ccard{border:2.5px solid var(--ink);padding:30px 26px}
-.ccard.f-pink{background:var(--bubblegum)} .ccard.f-butter{background:var(--butter)}
-.ccard.f-orange{background:var(--orangeade)} .ccard.f-white{background:var(--white)}
-.ccard .pin{display:flex;width:46px;height:46px;align-items:center;justify-content:center;border:2.5px solid var(--ink);background:var(--white);margin-bottom:15px}
-.ccard .pin svg{width:24px;height:24px;color:var(--ink)}
-.ccard h3{margin-bottom:9px;color:var(--ink)}
-.ccard p{font-size:1rem;color:var(--ink);opacity:.85}
+.ccard{padding:28px 26px;border:1.5px solid var(--ink)}
+.ccard.c-bubblegum{background:var(--bubblegum);border-color:var(--peony)}
+.ccard.c-plum{background:var(--ink);border-color:var(--orange);color:var(--daisy)}
+.ccard.c-lavender{background:var(--lavender);border-color:var(--ink)}
+.ccard.c-orange{background:var(--orange);border-color:var(--peony)}
+.ccard .em{font-size:2rem;line-height:1;display:block;margin-bottom:12px}
+.ccard h3{margin-bottom:9px}
+.ccard p{font-size:1rem;opacity:.9}
+.ccard.c-plum h3,.ccard.c-plum p{color:var(--daisy)}
 
-/* Green room */
-.room .sec-head .eyebrow{color:var(--moss)}
-.room-h{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--moss);text-align:center;
-  font-size:clamp(2.1rem,1.45rem + 2.9vw,3.7rem);line-height:1;max-width:840px;margin:0 auto}
-.room-sub{text-align:center;color:var(--moss);max-width:600px;margin:16px auto 0;font-weight:600}
-.room-eye{display:block;text-align:center;font-family:var(--mono);font-weight:500;text-transform:uppercase;letter-spacing:.2em;font-size:.8rem;color:var(--moss);margin-bottom:13px}
-
-/* Module cards (in green rooms) — borderless white + butter sub-box */
-.modules{display:grid;gap:22px;max-width:620px;margin:clamp(30px,4vw,46px) auto 0}
-.module{background:var(--white)}
-.module .top{padding:22px 24px 4px}
-.tab{display:inline-block;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:0.72rem;letter-spacing:.06em;
-  padding:5px 12px;margin-bottom:13px;background:var(--peony);color:var(--daisy)}
-.module:nth-child(even) .tab{background:var(--orangeade);color:var(--ink)}
-.m-name{display:flex;align-items:center;gap:12px}
-.m-name svg{width:28px;height:28px;color:var(--ink)}
-.m-name span{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(1.7rem,1.3rem + 1.6vw,2.3rem);color:var(--ink);line-height:1}
-.m-desc{font-size:1.0625rem;color:var(--ink);font-weight:600;margin-top:10px}
-.subbox{background:var(--butter);margin:16px 18px 18px;padding:17px 19px}
-.subbox .lab{font-family:var(--mono);font-weight:500;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;color:var(--moss);margin-bottom:13px}
-.subbox ul{list-style:none;display:grid;gap:11px}
-.subbox li{display:flex;gap:11px;align-items:flex-start;font-size:1rem;color:var(--ink);line-height:1.45}
-.subbox .ck{flex:none;width:21px;height:21px;background:var(--olive);display:flex;align-items:center;justify-content:center;margin-top:1px}
-.subbox .ck svg{width:13px;height:13px;color:var(--white)}
-.subbox strong{font-weight:800;color:var(--ink)}
-
-/* Checklist on white card (green room) */
-.room-card{background:var(--white);max-width:680px;margin:clamp(28px,4vw,42px) auto 0;padding:0}
-.room-card .head{background:var(--peony);color:var(--daisy);font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:0.95rem;letter-spacing:.05em;padding:13px 22px}
-.room-card .body{padding:22px 24px}
+/* WANT — checklist card, no header bar */
+.want-card{max-width:900px;margin:0 auto;background:var(--white);border:1.5px solid var(--lavender);padding:clamp(28px,4vw,44px)}
 .checklist{list-style:none;display:grid;gap:14px}
-.checklist.two{grid-template-columns:1fr 1fr;gap:14px 28px}
+.checklist.two{grid-template-columns:1fr 1fr;gap:14px 30px}
 @media(max-width:620px){.checklist.two{grid-template-columns:1fr}}
 .checklist li{display:flex;gap:12px;align-items:flex-start;font-size:1.0625rem;color:var(--ink);line-height:1.45}
-.checklist .ck{flex:none;width:24px;height:24px;background:var(--olive);display:flex;align-items:center;justify-content:center;margin-top:1px}
-.checklist .ck svg{width:14px;height:14px;color:var(--white)}
 
-/* Gap chips + reveal */
+/* GAP chips + reveal */
 .gap-line{display:flex;flex-wrap:wrap;justify-content:center;gap:11px;max-width:920px;margin:26px auto 0}
-.gap-line span{border:2.5px solid var(--ink);padding:11px 19px;font-weight:700;font-size:0.95rem;color:var(--ink)}
+.gap-line span{border:1.5px solid var(--ink);padding:11px 19px;font-weight:700;font-size:0.95rem;color:var(--ink)}
 .gap-line span:nth-child(1){background:var(--butter)} .gap-line span:nth-child(2){background:var(--bubblegum)}
-.gap-line span:nth-child(3){background:var(--orangeade)} .gap-line span:nth-child(4){background:var(--butter)} .gap-line span:nth-child(5){background:var(--bubblegum)}
-.reveal{max-width:840px;margin:clamp(36px,4vw,56px) auto 0;background:var(--bubblegum);border:3px solid var(--ink);padding:clamp(36px,4vw,60px);text-align:center}
+.gap-line span:nth-child(3){background:var(--lavender)} .gap-line span:nth-child(4){background:var(--butter)} .gap-line span:nth-child(5){background:var(--bubblegum)}
+.reveal{max-width:840px;margin:clamp(34px,4vw,54px) auto 0;background:var(--bubblegum);border:1.5px solid var(--peony);padding:clamp(34px,4vw,58px);text-align:center}
 .reveal .eyebrow{display:block;margin-bottom:14px}
 .reveal h2{margin-bottom:18px;color:var(--ink)}
 .reveal p{max-width:660px;margin:0 auto 14px;color:var(--ink)}
 .reveal .btn{margin-top:18px}
 
-/* Support */
-.studio{max-width:980px;margin:0 auto clamp(28px,3vw,40px);background:var(--white);border:2.5px solid var(--ink)}
-.studio .shead{padding:clamp(28px,3vw,40px);background:var(--butter);border-bottom:2.5px solid var(--ink)}
-.studio .shead .eyebrow{display:block;margin-bottom:12px;color:var(--peony)}
-.studio .shead h3{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(1.5rem,1.2rem + 1.5vw,2.1rem);margin-bottom:12px}
-.studio .shead p{max-width:660px;color:var(--ink);font-weight:500}
-.studio .sbody{padding:clamp(24px,3vw,34px);display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
-.sfeat h4{font-weight:800;font-size:1.0625rem;margin-bottom:6px}
-.sfeat p{font-size:0.95rem;color:var(--muted)}
-.tour{margin:0 clamp(24px,3vw,34px) clamp(24px,3vw,34px);border:2px dashed var(--peony);background:#fff8fc;padding:28px 22px;text-align:center;color:var(--muted)}
+/* CURRICULUM cards — Copy-Cure style: colored header, Work Sans title, circle bullets, testimonial callout */
+.modules{display:grid;gap:24px;max-width:680px;margin:0 auto}
+.module{background:var(--white);border:1.5px solid var(--ink)}
+.module .m-head{display:flex;align-items:center;gap:13px;padding:16px 22px;border-bottom:1.5px solid var(--ink)}
+.module .m-head .em{font-size:1.7rem;line-height:1}
+.module .m-head h3{font-family:var(--body);font-weight:800;text-transform:uppercase;font-size:1.35rem;letter-spacing:.01em;color:var(--ink)}
+.module:nth-child(5n+1){border-color:var(--peony)} .module:nth-child(5n+1) .m-head{background:var(--bubblegum);border-color:var(--peony)}
+.module:nth-child(5n+2){border-color:var(--ink)} .module:nth-child(5n+2) .m-head{background:var(--lavender)}
+.module:nth-child(5n+3){border-color:var(--peony)} .module:nth-child(5n+3) .m-head{background:var(--orange)}
+.module:nth-child(5n+4){border-color:var(--ink)} .module:nth-child(5n+4) .m-head{background:var(--butter)}
+.module:nth-child(5n+5){border-color:var(--peony)} .module:nth-child(5n+5) .m-head{background:var(--bubblegum)}
+.module .m-body{padding:22px 24px}
+.module .m-desc{font-size:1rem;color:var(--muted);margin-bottom:14px}
+.module ul{list-style:disc;padding-left:1.2em;display:grid;gap:9px;margin-bottom:18px}
+.module li{font-size:1rem;color:var(--ink);line-height:1.45}
+.module li::marker{color:var(--orange)}
+.module li strong{font-weight:800;color:var(--ink)}
+.m-quote{border:1.5px solid var(--lavender);background:var(--daisy);padding:15px 18px;font-style:italic;color:var(--muted);font-size:0.95rem}
+.m-quote b{display:block;font-style:normal;font-weight:800;color:var(--ink);margin-top:6px;font-size:0.85rem}
+
+/* SUPPORT — Email Studio app card + support cards */
+.appcard{max-width:980px;margin:0 auto clamp(26px,3vw,38px);background:var(--white);border:1.5px solid var(--ink)}
+.appcard .ahead{display:flex;align-items:center;gap:12px;background:var(--peony);color:var(--daisy);padding:16px 24px}
+.appcard .ahead .em{font-size:1.6rem}
+.appcard .ahead h3{font-family:var(--body);font-weight:800;text-transform:uppercase;color:var(--daisy);font-size:1.3rem}
+.appcard .abody{padding:clamp(22px,3vw,34px)}
+.appcard .abody>.lead{color:var(--ink);font-weight:500;max-width:680px;margin-bottom:22px;font-size:1.0625rem}
+.afeat{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.afeat .f h4{margin-bottom:6px}
+.afeat .f p{font-size:0.95rem;color:var(--muted)}
+.tour{margin-top:22px;border:1.5px dashed var(--peony);background:#fff8fc;padding:26px 22px;text-align:center;color:var(--muted)}
 .tour b{display:block;color:var(--ink);font-size:1.0625rem;margin-bottom:4px}
 .support{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;max-width:980px;margin:0 auto}
-.scard{border:2.5px solid var(--ink);padding:24px 22px}
-.scard:nth-child(1){background:var(--bubblegum)} .scard:nth-child(2){background:var(--butter)}
-.scard:nth-child(3){background:var(--orangeade)} .scard:nth-child(4){background:var(--white)}
-.scard .ic{display:flex;width:42px;height:42px;align-items:center;justify-content:center;border:2.5px solid var(--ink);background:var(--white);margin-bottom:11px}
-.scard .ic svg{width:22px;height:22px;color:var(--ink)}
-.scard h4{font-weight:800;font-size:1.0625rem;margin-bottom:6px;color:var(--ink)}
-.scard p{font-size:0.95rem;color:var(--ink);opacity:.85}
+.scard{padding:24px 22px;border:1.5px solid var(--ink)}
+.scard:nth-child(1){background:var(--bubblegum);border-color:var(--peony)}
+.scard:nth-child(2){background:var(--lavender);border-color:var(--ink)}
+.scard:nth-child(3){background:var(--orange);border-color:var(--peony)}
+.scard:nth-child(4){background:var(--white);border-color:var(--lavender)}
+.scard .em{font-size:1.6rem;display:block;margin-bottom:10px}
+.scard h4{margin-bottom:6px;color:var(--ink)}
+.scard p{font-size:0.95rem;color:var(--ink);opacity:.88}
 
-/* Pricing */
-.offer-card{max-width:700px;margin:0 auto;background:var(--white);border:3px solid var(--ink)}
-.offer-card .top{text-align:center;padding:30px 24px;background:var(--peony);color:var(--daisy)}
-.offer-card .top .eyebrow{color:var(--butter)}
-.offer-card .top h3{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(1.6rem,1.3rem + 1.6vw,2.3rem);margin-top:8px;color:var(--daisy)}
-.offer-card .body{padding:clamp(28px,4vw,42px)}
+/* PRICING (peony room, daisy card inside) */
+.offer-card{max-width:680px;margin:clamp(30px,4vw,44px) auto 0;background:var(--daisy);border:1.5px solid var(--ink)}
+.offer-card .top{text-align:center;padding:26px 24px;border-bottom:1.5px solid var(--ink)}
+.offer-card .top h3{font-family:var(--body);font-weight:800;text-transform:uppercase;font-size:clamp(1.5rem,1.2rem + 1.4vw,2rem);color:var(--ink)}
+.offer-card .body{padding:clamp(26px,4vw,40px)}
+.access-line{font-family:var(--mono);font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:0.8rem;color:var(--peony);margin-bottom:14px}
 .includes{list-style:none;display:grid;gap:13px;margin-bottom:24px}
 .includes li{display:flex;gap:12px;align-items:flex-start;font-size:1.0625rem;color:var(--ink)}
-.includes .ck{flex:none;width:24px;height:24px;background:var(--olive);display:flex;align-items:center;justify-content:center;margin-top:1px}
-.includes .ck svg{width:14px;height:14px;color:var(--white)}
-.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:760px;margin:0 auto 26px}
-@media(max-width:620px){.prices{grid-template-columns:1fr}}
-.pcard{border:2.5px solid var(--ink);padding:20px 16px;text-align:center}
-.pcard.p-olive{background:var(--olive)} .pcard.p-pink{background:var(--bubblegum)} .pcard.p-butter{background:var(--butter)}
-.pcard .pl{font-family:var(--mono);font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;color:var(--ink)}
-.pcard.p-olive .pl{color:var(--moss)}
+.prices{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:460px;margin:0 auto 24px}
+@media(max-width:520px){.prices{grid-template-columns:1fr}}
+.pcard{border:1.5px solid var(--ink);padding:20px 16px;text-align:center}
+.pcard.p1{background:var(--bubblegum)} .pcard.p2{background:var(--lavender)}
+.pcard .pl{font-family:var(--mono);font-weight:500;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;color:var(--ink)}
 .pcard .pp{font-family:var(--display);font-weight:900;font-size:1.9rem;color:var(--ink);margin-top:6px;line-height:1}
-.pcard.p-olive .pp{color:var(--moss)}
-.checkout{max-width:700px;margin:0 auto;border:2px dashed var(--ink);background:var(--butter);padding:24px 20px;text-align:center;color:var(--muted)}
+.checkout{border:1.5px dashed var(--ink);background:var(--butter);padding:22px 18px;text-align:center;color:var(--muted)}
 .checkout b{display:block;color:var(--ink);font-size:1.0625rem;margin-bottom:4px}
-.formula{text-align:center;max-width:640px;margin:24px auto 0;font-weight:700;color:var(--ink);font-size:1.125rem}
+.formula{text-align:center;max-width:600px;margin:22px auto 0;font-weight:700;color:var(--ink);font-size:1.0625rem}
 
-/* Big statement */
+/* Statement */
 .statement{text-align:center}
-.statement h2{font-size:clamp(2.5rem,1.5rem + 4.8vw,5.4rem);line-height:0.96;max-width:1000px;margin:0 auto}
+.statement h2{font-size:clamp(2.5rem,1.5rem + 4.8vw,5.2rem);line-height:0.96;max-width:1000px;margin:0 auto}
 .statement .lead{max-width:680px;margin:24px auto 0;color:var(--ink);font-weight:500}
-
-/* Visibility contrast */
-.vis-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:940px;margin:clamp(30px,3vw,44px) auto 0}
-.vis-card{border:2.5px solid var(--ink);padding:30px 28px}
-.vis-on{background:var(--chartreuse)} .vis-off{background:var(--white)}
-.vis-card h3{margin-bottom:12px;font-size:1.3rem;color:var(--ink)}
-.vis-card p{font-size:1rem;color:var(--ink)} .vis-off p{opacity:.82}
+.vis-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:940px;margin:clamp(28px,3vw,42px) auto 0}
+.vis-card{border:1.5px solid var(--ink);padding:28px 26px;text-align:left}
+.vis-on{background:var(--bubblegum);border-color:var(--peony)} .vis-off{background:var(--lavender)}
+.vis-card h3{margin-bottom:12px;font-size:1.25rem;color:var(--ink)}
+.vis-card p{font-size:1rem;color:var(--ink);opacity:.9}
 @media(max-width:620px){.vis-grid{grid-template-columns:1fr}}
 
 /* Case studies */
 .cases{display:grid;gap:22px;max-width:900px;margin:0 auto}
-.case{background:var(--white);border:2.5px solid var(--ink);padding:clamp(26px,3vw,38px)}
+.case{background:var(--white);border:1.5px solid var(--peony);padding:clamp(26px,3vw,38px)}
+.case:nth-child(even){border-color:var(--olive)}
 .case .who{font-family:var(--mono);font-weight:500;color:var(--peony);font-size:0.85rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:9px}
-.case h3{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(1.3rem,1.05rem + 1.2vw,1.85rem);margin-bottom:16px;line-height:1.04;color:var(--ink)}
+.case h3{font-size:clamp(1.2rem,1.05rem + 1vw,1.6rem);margin-bottom:16px;line-height:1.12;color:var(--ink)}
 .case .beats{display:grid;gap:10px;margin-bottom:16px}
 .case .beat{display:flex;gap:12px;align-items:flex-start;font-size:1.0625rem;color:var(--muted)}
-.case .beat .lab{flex:none;font-weight:800;color:var(--ink);min-width:112px}
-.case .result{background:var(--butter);border:2px solid var(--ink);padding:15px 19px;font-weight:700;color:var(--ink);font-size:1.0625rem;line-height:1.45}
+.case .beat .lab{flex:none;font-weight:800;color:var(--ink);min-width:110px}
+.case .result{background:var(--bubblegum);border:1.5px solid var(--peony);padding:15px 19px;font-weight:700;color:var(--ink);font-size:1.0625rem;line-height:1.45}
 .case .qt{margin-top:14px;font-style:italic;color:var(--muted);font-size:1rem}
 
 /* Receipts */
 .receipts{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1000px;margin:0 auto}
-.receipt{background:var(--white);border:2.5px solid var(--ink);padding:14px}
+.receipt{background:var(--white);border:1.5px solid var(--lavender);padding:14px}
+.receipt:nth-child(even){border-color:var(--peony)}
 .receipt.wide{grid-column:1 / -1}
 .receipt img{display:block;max-width:100%;width:auto;height:auto;max-height:560px;object-fit:contain;margin:0 auto}
 .receipt .cap{font-size:0.875rem;font-weight:700;color:var(--ink);padding:12px 6px 2px;line-height:1.4;text-align:center}
@@ -239,80 +213,70 @@ section{padding:clamp(58px,5.5vw,104px) 0;position:relative}
 
 /* Testimonials */
 .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;max-width:1040px;margin:0 auto}
-.quote{border:2.5px solid var(--ink);padding:26px 24px}
-.quote.f-pink{background:var(--bubblegum)} .quote.f-butter{background:var(--butter)}
-.quote.f-orange{background:var(--orangeade)} .quote.f-white{background:var(--white)}
-.quote .mk{font-family:var(--display);font-weight:900;font-size:2.2rem;line-height:0.6;color:var(--peony);display:block;margin-bottom:6px}
+.quote{border:1.5px solid var(--ink);padding:26px 24px}
+.quote:nth-child(4n+1){background:var(--bubblegum);border-color:var(--peony)}
+.quote:nth-child(4n+2){background:var(--lavender)}
+.quote:nth-child(4n+3){background:var(--orange);border-color:var(--peony)}
+.quote:nth-child(4n){background:var(--white);border-color:var(--lavender)}
+.quote .mk{font-family:var(--display);font-weight:900;font-size:2.1rem;line-height:0.6;color:var(--peony);display:block;margin-bottom:6px}
 .quote p{font-size:1.0625rem;line-height:1.45;color:var(--ink);font-weight:500}
 .quote .nm{display:block;margin-top:13px;font-weight:800;font-size:0.9rem;color:var(--ink)}
 
 /* Bio */
 .bio{display:grid;grid-template-columns:320px 1fr;gap:clamp(28px,4vw,56px);align-items:center;max-width:1000px;margin:0 auto}
-.bio .photo{position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--bubblegum);border:3px solid var(--ink);display:flex;align-items:center;justify-content:center;color:var(--ink);font-weight:600;padding:16px;text-align:center}
+.bio .photo{position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--bubblegum);border:1.5px solid var(--ink);display:flex;align-items:center;justify-content:center;color:var(--ink);font-weight:600;padding:16px;text-align:center}
 .bio .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .bio h2{margin:0 0 16px;font-size:clamp(1.9rem,1.4rem + 2.4vw,3rem)}
 .bio p{color:var(--muted)} .bio p+p{margin-top:14px}
-.bio .sig{margin-top:20px;font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:1.5rem;color:var(--ink)}
 @media(max-width:680px){.bio{grid-template-columns:1fr;text-align:center}.bio .photo{max-width:280px;margin:0 auto}}
 
 /* Ready */
 .ready{max-width:840px;margin:0 auto}
-.notfit{margin-top:26px;background:var(--white);border:2.5px solid var(--ink);padding:22px 24px;color:var(--ink);font-size:1.0625rem}
+.notfit{margin-top:26px;background:var(--white);border:1.5px solid var(--peony);padding:22px 24px;color:var(--ink);font-size:1.0625rem}
 .notfit b{color:var(--peony)}
 
-/* FAQ */
+/* FAQ — circle +/- */
 .faq{max-width:800px;margin:0 auto;display:grid;gap:14px}
-.faq details{background:var(--white);border:2.5px solid var(--ink);padding:4px 22px}
+.faq details{background:var(--white);border:1.5px solid var(--lavender);padding:4px 22px}
+.faq details[open]{border-color:var(--peony)}
 .faq summary{list-style:none;cursor:pointer;font-weight:800;font-size:1.0625rem;padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--ink)}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary .pm{flex:none;width:28px;height:28px;background:var(--orangeade);border:2px solid var(--ink);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:900;transition:transform .2s}
+.faq summary .pm{flex:none;width:28px;height:28px;border-radius:50%;background:var(--orange);border:1.5px solid var(--ink);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:900;transition:transform .2s}
 .faq details[open] summary .pm{transform:rotate(45deg)}
 .faq details p{padding:0 0 20px;color:var(--muted);font-size:1rem}
 .faq details p+p{margin-top:10px}
 
-/* Final */
-.final{text-align:center;position:relative;overflow:hidden}
-.final .arch{position:absolute;width:520px;height:520px;background:var(--foliage);border-radius:50%;left:50%;transform:translateX(-50%);bottom:-340px;z-index:0;opacity:.5}
-.final h2{max-width:900px;margin:0 auto 18px}
-.final p{max-width:660px;margin:0 auto 18px;color:var(--ink);font-weight:500}
-.final .reassure{font-size:0.875rem;color:var(--ink);opacity:.85;margin-top:18px;font-weight:600}
+/* Final (peony) */
+.final{text-align:center}
+.final h2{max-width:900px;margin:0 auto 18px;color:var(--daisy)}
+.final h2 .o{color:var(--orange)}
+.final p{max-width:660px;margin:0 auto 18px;color:rgba(255,251,231,.9);font-weight:500}
+.final .reassure{font-size:0.875rem;color:rgba(255,251,231,.8);margin-top:18px;font-weight:600}
 
-/* Footer */
-footer{background:var(--peony);color:rgba(255,251,231,.72);padding:48px 24px}
+/* Footer (peony) */
+footer{background:var(--peony);color:rgba(255,251,231,.72);padding:46px 24px}
 footer .fwrap{max-width:960px;margin:0 auto;text-align:center}
 footer a{color:var(--daisy);text-decoration:none;font-weight:600}
 footer .brand{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--daisy);font-size:1.6rem;margin-bottom:4px}
 footer .flinks{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;margin:18px 0;font-weight:700}
 footer .disc{font-size:0.75rem;line-height:1.6;color:rgba(255,251,231,.5);max-width:900px;margin:18px auto 0;text-align:left}
 footer .disc p+p{margin-top:10px}
-
-.center-cta{text-align:center;margin-top:clamp(36px,4vw,52px)}
 </style>
 </head>
 <body>
 
-<!-- ═══ 1. HERO ═══ -->
+<!-- 1. HERO (daisy, full width, no image) -->
 <section class="hero bg-daisy">
   <div class="wrap">
-    <div class="grid">
-      <div>
-        <span class="eyebrow">For coaches, creators &amp; service providers</span>
-        <h1>Your list should be making you <span class="hl">more money</span> than it is.</h1>
-        <p class="lead">The membership where coaches and service providers turn their email list into their most consistent source of sales — and the reason their highest month keeps getting topped.</p>
-        <a href="https://scaleyourresonance.thrivecart.com/best-seller/" class="btn">Join Best Seller
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <span class="btn-sub">$1,495 for 6 months · or 5 payments of $375</span>
-        <div class="proof">
-          <div class="stars">★★★★★</div>
-          <p>"WILD — no one is teaching content like this!" <b>— Katie L.</b></p>
-        </div>
-      </div>
-      <div class="art">
-        <div class="arch"></div>
-        <!-- ⟢ SWAP: save headshot as images/jocelyn.jpg -->
-        <div class="photo">Your photo here<img src="images/jocelyn.jpg" alt="Jocelyn Montemarano" onerror="this.remove()"></div>
-        <div class="stamp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3L22 9l-5 4.7L18.2 21 12 17.3 5.8 21 7 13.7 2 9l7.1-.7z"/></svg></div>
-      </div>
+    <span class="eyebrow">For coaches, creators &amp; service providers</span>
+    <h1>Your list should be making you <span class="hl">more money</span> than it is.</h1>
+    <p class="lead">The membership where coaches and service providers turn their email list into their most consistent source of sales — and the reason their highest month keeps getting topped.</p>
+    <a href="https://scaleyourresonance.thrivecart.com/best-seller/" class="btn">Join Best Seller
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <span class="btn-sub">$1,495 for 6 months · or 5 payments of $375</span>
+    <div class="proof">
+      <div class="stars">★★★★★</div>
+      <p>"WILD — no one is teaching content like this!" <b>— Katie L.</b></p>
     </div>
   </div>
 </section>
@@ -322,11 +286,11 @@ footer .disc p+p{margin-top:10px}
   <span>Cold to sold</span><span class="d">◆</span><span>more sales</span><span class="d">◆</span><span>less guessing</span><span class="d">◆</span><span>every offer you sell</span><span class="d">◆</span>
 </div></div>
 
-<!-- ═══ 2. SYMPTOMS (butter room, editorial list) ═══ -->
+<!-- 2. SYMPTOMS (butter, peony+orange header, bubblegum circle x's) -->
 <section class="bg-butter">
   <div class="wrap">
     <div class="sec-head">
-      <h2>You've been told email has the highest ROI.<br><span class="pe">Your list hasn't gotten the memo.</span></h2>
+      <h2><span class="pe">You've been told email has the highest ROI.</span> <span class="o">Your list hasn't gotten the memo.</span></h2>
     </div>
     <div class="sym">
       <div class="row"><span class="mk">✕</span><p>You're emailing but you have no idea if it's actually working.</p></div>
@@ -343,48 +307,46 @@ footer .disc p+p{margin-top:10px}
   </div>
 </section>
 
-<!-- ═══ 3. CONSEQUENCES (daisy, color cards) ═══ -->
+<!-- 3. CONSEQUENCES (daisy, color cards w/ emojis) -->
 <section class="bg-daisy">
   <div class="wrap">
     <div class="sec-head">
-      <h2>If your list isn't converting, you're letting the <span class="hl">easiest money</span> in your business slip right through.</h2>
+      <h2 class="pe">If your list isn't converting, you're letting the <span class="hl">easiest money</span> in your business slip right through.</h2>
     </div>
     <div class="cgrid">
-      <div class="ccard f-pink"><div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12"/><circle cx="12" cy="12" r="2.5"/></svg></div><h3>You're leaving sales on the table every week.</h3><p>Every subscriber who joined and didn't buy is money still sitting there — waiting to work with you.</p></div>
-      <div class="ccard f-butter"><div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2s5 4 5 9a5 5 0 0 1-10 0c0-2 1-3 1-3"/></svg></div><h3>You're working twice as hard for the same sales.</h3><p>Every sale needs you to show up and push it over the line. Email sells when you're not actively selling.</p></div>
-      <div class="ccard f-orange"><div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l6 6 4-4 7 7"/><path d="M21 16v-5h-5"/></svg></div><h3>Your launches aren't growing like they should.</h3><p>If your emails aren't converting new people, launches hover at the same number no matter your list size.</p></div>
-      <div class="ccard f-white"><div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></div><h3>Every sale is a manual process.</h3><p>Endless DMs and cold sales calls. A converting list means people show up already sold.</p></div>
+      <div class="ccard c-bubblegum"><span class="em">💸</span><h3>You're leaving sales on the table every week.</h3><p>Every subscriber who joined and didn't buy is money still sitting there — waiting to work with you.</p></div>
+      <div class="ccard c-plum"><span class="em">🥵</span><h3>You're working twice as hard for the same sales.</h3><p>Every sale needs you to push it over the line. Email is the only channel that sells when you're not actively selling.</p></div>
+      <div class="ccard c-lavender"><span class="em">📉</span><h3>Your launches aren't growing like they should.</h3><p>If your emails aren't converting new people, launches hover at the same number no matter your list size.</p></div>
+      <div class="ccard c-orange"><span class="em">🔁</span><h3>Every sale is a manual process.</h3><p>Endless DMs and cold sales calls. A converting list means people show up already sold.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ 4. WHAT YOU WANT (foliage green room) ═══ -->
-<section class="room bg-foliage">
-  <div class="wrap">
-    <span class="room-eye">What you actually want</span>
-    <h2 class="room-h">A converting list turns more of the people you're already reaching into buyers.</h2>
-    <div class="room-card">
-      <div class="head">What a working list gets you</div>
-      <div class="body">
-        <ul class="checklist two">
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Subscribers go from cold to sold within days. Not months of lurking.</li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Campaigns that convert on demand, for any offer — without always needing to live launch.</li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Sales happening between launches, in the background, without you pushing.</li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>People showing up to sales calls already sold. Or skipping the call and just joining.</li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Repeat buyers, and buyers who upsell again and again.</li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Extra sales from segments you'd never have thought to sell to separately.</li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>A list you're actually excited to email — because you know it's going to do something.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ 5. GAP + INTRODUCING (white) ═══ -->
-<section class="bg-white">
+<!-- 4. WHAT YOU WANT (butter, no eyebrow, no card header, circle checks) -->
+<section class="bg-butter">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Most people are sending emails. Almost nobody has an <span class="hl">actual email strategy</span>.</h2>
+      <h2 class="pe">A converting list turns more of the people you're already reaching into <span class="o">buyers</span>.</h2>
+    </div>
+    <div class="want-card">
+      <ul class="checklist two">
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Subscribers go from cold to sold within days. Not months of lurking.</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Campaigns that convert on demand, for any offer — without always needing to live launch.</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Sales happening between launches, in the background, without you pushing.</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>People showing up to sales calls already sold. Or skipping the call and just joining.</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Repeat buyers, and buyers who upsell again and again.</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Extra sales from segments you'd never have thought to sell to separately.</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>A list you're actually excited to email — because you know it's going to do something.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 5. GAP + INTRODUCING (daisy) -->
+<section class="bg-daisy">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="pe">Most people are sending emails. Almost nobody has an <span class="hl">actual email strategy</span>.</h2>
       <p>A real email strategy is five things working together. Most people have one — maybe two.</p>
     </div>
     <div class="gap-line">
@@ -392,7 +354,7 @@ footer .disc p+p{margin-top:10px}
     </div>
     <div class="reveal">
       <span class="eyebrow">Introducing</span>
-      <h2>Best Seller</h2>
+      <h2 class="pe">Best Seller</h2>
       <p>The 6-month membership where you build a complete email strategy that converts your list into consistent sales — for every program, product, and service you sell.</p>
       <p><b>No more guessing. No more ghosting your list. No more crossing your fingers every time you hit send.</b></p>
       <a href="https://scaleyourresonance.thrivecart.com/best-seller/" class="btn">Join Best Seller</a>
@@ -405,94 +367,80 @@ footer .disc p+p{margin-top:10px}
   <span>Send</span><span class="d">◆</span><span>Spike</span><span class="d">◆</span><span>Segment</span><span class="d">◆</span><span>Stack</span><span class="d">◆</span><span>Subscribe</span><span class="d">◆</span>
 </div></div>
 
-<!-- ═══ 6. CURRICULUM (OLIVE green room) ═══ -->
-<section class="room bg-olive">
+<!-- 6. CURRICULUM (daisy, Copy-Cure style cards) -->
+<section class="bg-daisy">
   <div class="wrap">
-    <span class="room-eye">What you build inside</span>
-    <h2 class="room-h">The five pillars of a list that actually converts.</h2>
+    <div class="sec-head">
+      <h2 class="pe">Curriculum for converting your list <span class="o">on demand</span> — send, spike, segment, stack, subscribe.</h2>
+    </div>
     <div class="modules">
 
       <div class="module">
-        <div class="top">
-          <span class="tab">Pillar 01</span>
-          <div class="m-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16"/><path d="M2 6l10 7 10-7"/></svg><span>Send</span></div>
+        <div class="m-head"><span class="em">✉️</span><h3>Send</h3></div>
+        <div class="m-body">
           <p class="m-desc">Write emails your subscribers are obsessed with reading and clicking — that move people closer to buying with every send.</p>
-        </div>
-        <div class="subbox">
-          <div class="lab">Inside this pillar</div>
           <ul>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Create your <strong>Offer Demand Message Map</strong> — exactly what to say about each offer to make it feel unmissable.</span></li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Map your <strong>90-Day Email Outlook</strong> so you always know what you're selling, when, and how.</span></li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Build your <strong>Core Conversion Topics &amp; Idea Bank</strong> so every email has a job.</span></li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Learn the <strong>Conversion Components Method</strong> — the structure every high-converting email follows.</span></li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Use <strong>Conversion Copy Boosters</strong> — client stories, urgency, objection handling, irresistible value.</span></li>
+            <li>Create your <strong>Offer Demand Message Map</strong> — exactly what to say about each offer to make it feel unmissable.</li>
+            <li>Map your <strong>90-Day Email Outlook</strong> so you always know what you're selling, when, and how.</li>
+            <li>Build your <strong>Core Conversion Topics &amp; Idea Bank</strong> so every email has a job.</li>
+            <li>Learn the <strong>Conversion Components Method</strong> — the structure every high-converting email follows.</li>
+            <li>Use <strong>Conversion Copy Boosters</strong> — client stories, urgency, objection handling, irresistible value.</li>
           </ul>
+          <div class="m-quote">"The 7 conversion components make it so easy to draft emails — content creation 10x easier."<b>— Emilie N. ⟢ swap to best-fit quote</b></div>
         </div>
       </div>
 
       <div class="module">
-        <div class="top">
-          <span class="tab">Pillar 02</span>
-          <div class="m-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg><span>Spike</span></div>
+        <div class="m-head"><span class="em">⚡</span><h3>Spike</h3></div>
+        <div class="m-body">
           <p class="m-desc">Create email-only sales moments on demand that give your list an exciting reason to join your offer. No live launch required.</p>
-        </div>
-        <div class="subbox">
-          <div class="lab">Inside this pillar</div>
           <ul>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Learn what an <strong>email-only campaign</strong> is, when to use it, and how to choose the format.</span></li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Follow the <strong>campaign sequence map</strong> — exactly what to send, in what order, and why.</span></li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Get the complete <strong>live launch email plan</strong> — more sign-ups, show-ups, conversions.</span></li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Evaluate every campaign so you know what worked and <strong>when to automate it</strong>.</span></li>
+            <li>Learn what an <strong>email-only campaign</strong> is, when to use it, and how to choose the format.</li>
+            <li>Follow the <strong>campaign sequence map</strong> — exactly what to send, in what order, and why.</li>
+            <li>Get the complete <strong>live launch email plan</strong> — more sign-ups, show-ups, conversions.</li>
+            <li>Evaluate every campaign so you know what worked and <strong>when to automate it</strong>.</li>
           </ul>
+          <div class="m-quote">"I had the highest launch for my offer since launching it a year ago."<b>— Emilie N. ⟢ swap to best-fit quote</b></div>
         </div>
       </div>
 
       <div class="module">
-        <div class="top">
-          <span class="tab">Pillar 03</span>
-          <div class="m-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.5" fill="currentColor"/></svg><span>Segment</span></div>
+        <div class="m-head"><span class="em">🎯</span><h3>Segment</h3></div>
+        <div class="m-body">
           <p class="m-desc">Use data only email can give you to get the right message to the right person at the right time.</p>
-        </div>
-        <div class="subbox">
-          <div class="lab">Inside this pillar</div>
           <ul>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Identify your <strong>primary segmentation question</strong> so emails feel like "did she write this just for me?"</span></li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Learn when and how to <strong>personalize your messaging</strong> to each segment so it converts more.</span></li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Find your <strong>secret selling segments</strong> and make customized offers — without creating anything new.</span></li>
+            <li>Identify your <strong>primary segmentation question</strong> so emails feel like "did she write this just for me?"</li>
+            <li>Learn when and how to <strong>personalize your messaging</strong> to each segment so it converts more.</li>
+            <li>Find your <strong>secret selling segments</strong> and make customized offers — without creating anything new.</li>
           </ul>
+          <div class="m-quote">"Getting your expert POV for those small tweaks that make all the difference is priceless."<b>— Natalie T. ⟢ swap to best-fit quote</b></div>
         </div>
       </div>
 
       <div class="module">
-        <div class="top">
-          <span class="tab">Pillar 04</span>
-          <div class="m-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg><span>Stack</span></div>
+        <div class="m-head"><span class="em">🔁</span><h3>Stack</h3></div>
+        <div class="m-body">
           <p class="m-desc">Build automated sequences that run in the background, making sales without you writing anything new.</p>
-        </div>
-        <div class="subbox">
-          <div class="lab">Inside this pillar</div>
           <ul>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Set up <strong>automated sequences</strong> that move new subscribers toward your offers on autopilot.</span></li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Know exactly <strong>when automation outperforms active sending</strong> — so your Stack amplifies everything else.</span></li>
+            <li>Set up <strong>automated sequences</strong> that move new subscribers toward your offers on autopilot.</li>
+            <li>Know exactly <strong>when automation outperforms active sending</strong> — so your Stack amplifies everything else.</li>
           </ul>
+          <div class="m-quote">"After 8 years of word-of-mouth only, it's wild to have a list I can make offers to — and they buy."<b>— Katie L. ⟢ swap to best-fit quote</b></div>
         </div>
       </div>
 
       <div class="module">
-        <div class="top">
-          <span class="tab">Pillar 05</span>
-          <div class="m-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H5.2L4 18z"/><path d="M8 9h8M8 12h5"/></svg><span>Subscribe</span></div>
+        <div class="m-head"><span class="em">📩</span><h3>Subscribe</h3></div>
+        <div class="m-body">
           <p class="m-desc">Fill your list with right-fit buyers and turn every new subscriber into a hot lead from the moment they opt in.</p>
-        </div>
-        <div class="subbox">
-          <div class="lab">Inside this pillar</div>
           <ul>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Build a <strong>lead magnet</strong> that makes people think: I need to know what else she knows.</span></li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Choose the <strong>right lead magnet type</strong> for your business — service provider vs coach/course creator.</span></li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Build your <strong>complete funnel</strong> — opt-in, thank you, welcome sequence, and reply strategy.</span></li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Learn the <strong>3 content angles</strong> that drive right-fit subscribers from any platform.</span></li>
-            <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Run a <strong>Signature Series Campaign</strong> to add a big wave of right-fit leads fast.</span></li>
+            <li>Build a <strong>lead magnet</strong> that makes people think: I need to know what else she knows.</li>
+            <li>Choose the <strong>right lead magnet type</strong> for your business — service provider vs coach/course creator.</li>
+            <li>Build your <strong>complete funnel</strong> — opt-in, thank you, welcome sequence, and reply strategy.</li>
+            <li>Learn the <strong>3 content angles</strong> that drive right-fit subscribers from any platform.</li>
+            <li>Run a <strong>Signature Series Campaign</strong> to add a big wave of right-fit leads fast.</li>
           </ul>
+          <div class="m-quote">"I added 200 right-fit subscribers and started booking calls from email for the first time."<b>— Jill, leadership coach ⟢ swap to best-fit quote</b></div>
         </div>
       </div>
 
@@ -501,50 +449,46 @@ footer .disc p+p{margin-top:10px}
   </div>
 </section>
 
-<!-- ═══ 7. SUPPORT (white) ═══ -->
-<section class="bg-white">
+<!-- 7. SUPPORT (butter, app card + support cards) -->
+<section class="bg-butter">
   <div class="wrap">
     <div class="sec-head">
-      <h2>You get an email strategist <span class="hl">and a hype girl</span> in your corner.</h2>
+      <h2 class="pe">You get an email strategist <span class="o">and a hype girl</span> in your corner.</h2>
     </div>
-    <div class="studio">
-      <div class="shead">
-        <span class="eyebrow">Email Studio — your email writing partner</span>
-        <h3>The only email app that turns voice notes into high-converting emails. No desk required.</h3>
-        <p>Trained on your voice, your offers, and 30+ proven email styles. It interviews you, you answer with a voice note, and because you co-create every email, each one is infused with your ideas, stories, and point of view — not generic fluff.</p>
+    <div class="appcard">
+      <div class="ahead"><span class="em">📱</span><h3>Email Studio — your email writing partner</h3></div>
+      <div class="abody">
+        <p class="lead">The only email app that turns voice notes into high-converting emails. No desk required. Trained on your voice, your offers, and 30+ proven email styles — it interviews you, you answer with a voice note, and you co-create every email so each one is unmistakably yours.</p>
+        <div class="afeat">
+          <div class="f"><h4>🎙️ Talk it out from anywhere</h4><p>Go for a walk and just yap. Email Studio turns your voice notes into emails designed to convert.</p></div>
+          <div class="f"><h4>🤝 Co-writes with you, not for you</h4><p>It interviews you, pushes for clarity, and shapes your ideas — so every email is yours, sharper and faster.</p></div>
+          <div class="f"><h4>🎯 Built on proven email styles</h4><p>Trained on 30+ email styles engineered to engage, build demand, and convert — so every email has a job.</p></div>
+        </div>
+        <!-- ⟢ SWAP: Email Studio click-through tour embed (app.scaleyourresonance.com) -->
+        <div class="tour"><b>⟢ Email Studio interactive tour embeds here</b>Drop in the click-through tour embed — the same one used on the Email Studio sales page.</div>
       </div>
-      <div class="sbody">
-        <div class="sfeat"><h4>🎙️ Talk it out from anywhere</h4><p>Go for a walk and just yap. Email Studio turns your voice notes into emails designed to convert.</p></div>
-        <div class="sfeat"><h4>🤝 It co-writes with you, not for you</h4><p>It interviews you, pushes for clarity when you're vague, and shapes your ideas — so every email is yours, sharper and faster.</p></div>
-        <div class="sfeat"><h4>🎯 Built on proven email styles</h4><p>Trained on 30+ email styles engineered to engage, build demand, and convert — so every email has a job.</p></div>
-      </div>
-      <!-- ⟢ SWAP: Email Studio click-through tour embed (app.scaleyourresonance.com) -->
-      <div class="tour"><b>⟢ Email Studio interactive tour embeds here</b>Drop in the click-through tour embed — the same one used on the Email Studio sales page.</div>
     </div>
     <div class="support">
-      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div><h4>Asset Reviews</h4><p>Send me your emails, opt-in pages, sales pages, and messaging. I'll tell you exactly what's working and what to fix — on your actual stuff.</p></div>
-      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h4>Weekly Collaboration Calls</h4><p>Not Q&amp;A — actual collaboration. Like texting your email strategist bestie, except live. Two time slots a month.</p></div>
-      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg></div><h4>Monthly Implementation Workshops</h4><p>Where we stop talking about it and actually do it — lead magnets, campaigns, automations, built live with my feedback.</p></div>
-      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h4>On-Demand Q&amp;A in Slack</h4><p>Voice notes, quick answers, async coaching, real-time troubleshooting. Where a lot of people have their biggest breakthroughs.</p></div>
+      <div class="scard"><span class="em">✍️</span><h4>Asset Reviews</h4><p>Send me your emails, opt-in pages, sales pages, and messaging. I'll tell you exactly what's working and what to fix — on your actual stuff.</p></div>
+      <div class="scard"><span class="em">🍵</span><h4>Weekly Collaboration Calls</h4><p>Not Q&amp;A — actual collaboration. Like texting your email strategist bestie, except live. Two time slots a month.</p></div>
+      <div class="scard"><span class="em">🧑‍💻</span><h4>Monthly Implementation Workshops</h4><p>Where we stop talking about it and actually do it — lead magnets, campaigns, automations, built live with my feedback.</p></div>
+      <div class="scard"><span class="em">👯</span><h4>On-Demand Q&amp;A in Slack</h4><p>Voice notes, quick answers, async coaching, real-time troubleshooting. Where a lot of people have their biggest breakthroughs.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ 8. PRICING (daisy) ═══ -->
-<section class="bg-daisy" id="join">
+<!-- 8. PRICING (peony room, daisy card inside) -->
+<section class="bg-peony" id="join">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Ready to make your list work?</span>
-      <h2>Best Seller. <span class="hl">6 months.</span></h2>
+      <h2 style="color:var(--daisy);font-size:clamp(1.8rem,1.3rem + 2vw,2.8rem)">Make a whole lot more <span class="o">money</span> from your list.</h2>
     </div>
     <div class="offer-card">
-      <div class="top">
-        <span class="eyebrow">Everything you get</span>
-        <h3>Best Seller Membership</h3>
-      </div>
+      <div class="top"><h3>Best Seller</h3></div>
       <div class="body">
+        <div class="access-line">6 months of access to:</div>
         <ul class="includes">
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><div>Five-pillar curriculum — <b>SEND, SPIKE, SEGMENT, STACK, SUBSCRIBE</b></div></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><div>Curriculum for Converting Your List On Demand — <b>send, spike, segment, stack, subscribe</b></div></li>
           <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Email Studio</b> — the email writing app</div></li>
           <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Weekly Collaboration Calls</b> (2 time slots/month)</div></li>
           <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Monthly Implementation Workshops</b></div></li>
@@ -552,23 +496,22 @@ footer .disc p+p{margin-top:10px}
           <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>On-Demand Q&amp;A in Slack</b></div></li>
         </ul>
         <div class="prices">
-          <div class="pcard p-olive"><div class="pl">Pay in full</div><div class="pp">$1,498</div></div>
-          <div class="pcard p-pink"><div class="pl">Payment plan</div><div class="pp">5 × $375</div></div>
-          <div class="pcard p-butter"><div class="pl">Access</div><div class="pp">6 months</div></div>
+          <div class="pcard p1"><div class="pl">Pay in full</div><div class="pp">$1,498</div></div>
+          <div class="pcard p2"><div class="pl">Payment plan</div><div class="pp">5 × $375</div></div>
         </div>
         <!-- ⟢ SWAP: ThriveCart checkout embed -->
         <div class="checkout"><b>⟢ ThriveCart checkout embeds here</b>Paste your ThriveCart embed snippet in place of this box.</div>
         <p class="formula">Your expertise 🤝 my email strategy brain = your list finally working the way it should.</p>
-        <div class="center-cta" style="margin-top:22px"><a href="https://scaleyourresonance.thrivecart.com/best-seller/" class="btn">Join Best Seller now</a></div>
+        <div class="center-cta" style="margin-top:20px"><a href="https://scaleyourresonance.thrivecart.com/best-seller/" class="btn">Join Best Seller</a></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ 9. BIG STATEMENT + VISIBILITY (white) ═══ -->
-<section class="bg-white statement">
+<!-- 9. STATEMENT + VISIBILITY (daisy) -->
+<section class="bg-daisy statement">
   <div class="wrap">
-    <h2>Visibility gets you <span class="ms">seen</span>.<br>Email gets you <span class="o">paid</span>.</h2>
+    <h2 class="pe">Visibility gets you <span class="ms">seen</span>.<br>Email gets you <span class="o">paid</span>.</h2>
     <p class="lead">You can go viral and still make zero sales. 10,000 followers, a podcast, a weekly newsletter, a genuinely incredible offer — and if the people finding you have nowhere to go after they discover you, all of that visibility stays exactly that. Visibility. Not revenue.</p>
     <div class="vis-grid">
       <div class="vis-card vis-on"><h3>🔥 When your list is converting</h3><p>Every new subscriber is moved toward your offer from the moment they opt in. Every campaign builds on the last. Every Reel, podcast, and ad actually turns into sales — because your list catches it.</p></div>
@@ -578,10 +521,10 @@ footer .disc p+p{margin-top:10px}
   </div>
 </section>
 
-<!-- ═══ 10. CASE STUDIES (daisy) ═══ -->
-<section class="bg-daisy">
+<!-- 10. CASE STUDIES (butter) -->
+<section class="bg-butter">
   <div class="wrap">
-    <div class="sec-head"><h2>Look what happens when the list <span class="hl">actually works</span>. 👀</h2></div>
+    <div class="sec-head"><h2 class="pe">Look what happens when the list <span class="o">actually works</span>. 👀</h2></div>
     <div class="cases">
       <div class="case">
         <div class="who">Emilie · money coach</div>
@@ -626,10 +569,10 @@ footer .disc p+p{margin-top:10px}
   </div>
 </section>
 
-<!-- ═══ 11. RECEIPTS WALL (bubblegum room) ═══ -->
-<section class="bg-bubblegum">
+<!-- 11. RECEIPTS (daisy) -->
+<section class="bg-daisy">
   <div class="wrap">
-    <div class="sec-head"><h2>The receipts, <span class="hl">unfiltered</span>.</h2></div>
+    <div class="sec-head"><h2 class="pe">The receipts, <span class="o">unfiltered</span>.</h2></div>
     <div class="receipts">
       <div class="receipt"><img src="images/jana-50k.png" alt="Jana: 14 spots sold on day two and ~$50,000 from case studies"><div class="cap">Jana sold 14 spots on day two of her launch — and traces ~$50,000 to case studies built with the system.</div></div>
       <div class="receipt"><img src="images/everyone-emilie.png" alt="Emilie names Best Seller"><div class="cap">Asked what "everyone needs to know about" — Emilie named Best Seller.</div></div>
@@ -643,73 +586,69 @@ footer .disc p+p{margin-top:10px}
   </div>
 </section>
 
-<!-- ═══ 12. ABOUT JOCELYN (white) ═══ -->
-<section class="bg-white">
+<!-- 12. BIO (butter) -->
+<section class="bg-butter">
   <div class="wrap">
     <div class="bio">
       <!-- ⟢ SWAP: save headshot as images/jocelyn.jpg -->
       <div class="photo">Your photo here<img src="images/jocelyn.jpg" alt="Jocelyn Montemarano" onerror="this.remove()"></div>
       <div>
         <span class="eyebrow">Who's teaching this</span>
-        <h2 style="margin-top:12px">I'm Jocelyn. Journalist turned <span class="o">email strategist</span>. 👋</h2>
+        <h2 class="pe" style="margin-top:12px">I'm Jocelyn. Journalist turned <span class="o">email strategist</span>. 👋</h2>
         <p>For 5 years I've been the person coaches and experts call when they want their emails to actually sell. We're talking 6-figure launches, individual emails pulling 5-figures, and a personal list of under 450 subscribers that's generated multiple 6-figures — selling everything from digital products to $9k services.</p>
         <p><strong>My list buys whatever I sell. And it buys even when I'm not actively emailing.</strong></p>
         <p>That didn't happen by sending weekly emails, selling one offer, or only using email during launches. It happened when I stopped doing email one way and started building a strategy with options: who I'm selling to, how I'm selling it, and when.</p>
         <p>That's what I built Best Seller around — so you can make more money from your list without being locked into one strategy, one offer type, or one way of selling.</p>
-        <div class="sig">— Jocelyn</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ 13. TESTIMONIALS (daisy) ═══ -->
+<!-- 13. TESTIMONIALS (daisy) -->
 <section class="bg-daisy">
   <div class="wrap">
-    <div class="sec-head"><h2>Members don't whisper about this. <span class="pe">They shout.</span></h2></div>
+    <div class="sec-head"><h2 class="pe">Members don't whisper about this. <span class="o">They shout.</span></h2></div>
     <div class="quotes">
-      <div class="quote f-pink"><span class="mk">“</span><p>1 hour with you has changed how I think about content.</p><span class="nm">— Natalie K.</span></div>
-      <div class="quote f-butter"><span class="mk">“</span><p>WILD — no one is teaching content like this!</p><span class="nm">— Katie L.</span></div>
-      <div class="quote f-orange"><span class="mk">“</span><p>Getting your expert POV for those small tweaks that make all the difference is priceless.</p><span class="nm">— Natalie T.</span></div>
-      <div class="quote f-white"><span class="mk">“</span><p>Your feedback on my emails is life-changing. The writing became easier — but also more people click the link in my emails. Before Best Seller, nobody did that. Not even out of curiosity, hahaha.</p><span class="nm">— Marit V.</span></div>
-      <div class="quote f-butter"><span class="mk">“</span><p>It took me 1.5 hours to write 3 emails. I used to spend 1.5 hours on one. Plus I only sent one email a week. Now I send 3.</p><span class="nm">— Marit V.</span></div>
-      <div class="quote f-pink"><span class="mk">“</span><p>This is the very first course where I want to be at every call. I never had that before — but I get so much out of our calls.</p><span class="nm">— Marit V.</span></div>
-      <div class="quote f-white"><span class="mk">“</span><p>After a word-of-mouth-only business for 8 years, it's really wild to have an email list I can make offers to — and then they buy.</p><span class="nm">— Katie L.</span></div>
-      <div class="quote f-orange"><span class="mk">“</span><p>Honestly the messaging prompts were unlike others I've done before — and I've done a lot of messaging work over the last year in various programs!</p><span class="nm">— Emilie N. <em style="opacity:.7">⟢ confirm</em></span></div>
+      <div class="quote"><span class="mk">“</span><p>1 hour with you has changed how I think about content.</p><span class="nm">— Natalie K.</span></div>
+      <div class="quote"><span class="mk">“</span><p>WILD — no one is teaching content like this!</p><span class="nm">— Katie L.</span></div>
+      <div class="quote"><span class="mk">“</span><p>Getting your expert POV for those small tweaks that make all the difference is priceless.</p><span class="nm">— Natalie T.</span></div>
+      <div class="quote"><span class="mk">“</span><p>Your feedback on my emails is life-changing. The writing became easier — but also more people click the link in my emails. Before Best Seller, nobody did that. Not even out of curiosity, hahaha.</p><span class="nm">— Marit V.</span></div>
+      <div class="quote"><span class="mk">“</span><p>It took me 1.5 hours to write 3 emails. I used to spend 1.5 hours on one. Plus I only sent one email a week. Now I send 3.</p><span class="nm">— Marit V.</span></div>
+      <div class="quote"><span class="mk">“</span><p>This is the very first course where I want to be at every call. I never had that before — but I get so much out of our calls.</p><span class="nm">— Marit V.</span></div>
+      <div class="quote"><span class="mk">“</span><p>After a word-of-mouth-only business for 8 years, it's really wild to have an email list I can make offers to — and then they buy.</p><span class="nm">— Katie L.</span></div>
+      <div class="quote"><span class="mk">“</span><p>Honestly the messaging prompts were unlike others I've done before — and I've done a lot of messaging work over the last year in various programs!</p><span class="nm">— Emilie N. <em style="opacity:.7">⟢ confirm</em></span></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ 14. YOU'RE READY IF (foliage green room) ═══ -->
-<section class="room bg-foliage">
+<!-- 14. READY (butter, circle checks) -->
+<section class="bg-butter">
   <div class="wrap">
-    <span class="room-eye">Is this you?</span>
-    <h2 class="room-h">You're ready for Best Seller if…</h2>
-    <div class="room-card ready" style="max-width:840px">
-      <div class="body" style="padding:clamp(24px,3vw,34px)">
-        <ul class="checklist">
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>You have at least one program, product, or service you're selling — and you're ready for your list to do more of the selling.</li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>You're done piecing together email tips from five different places and want one complete system.</li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>You want your list to convert right-fit subscribers into buyers — not just collect names and sit there.</li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>You're building visibility on Instagram, LinkedIn, a podcast, or through ads — and want it to turn into sales.</li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>You've been ghosting your list, winging it, or sending without a real strategy — and you're ready to change that.</li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>You want to stop relying on launches, referrals, or DM conversations as your only way to close a sale.</li>
-          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>You're in this for the long game — you want the skill, not just a template, because you plan to keep selling for years.</li>
-        </ul>
-        <div class="notfit"><b>This is not the right fit if</b> you don't have an offer yet, you're not willing to show up and do the work, or you're looking for someone to write your emails for you.</div>
-      </div>
+    <div class="sec-head"><h2 class="pe">You're ready for Best Seller <span class="o">if…</span></h2></div>
+    <div class="ready">
+      <ul class="checklist">
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>You have at least one program, product, or service you're selling — and you're ready for your list to do more of the selling.</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>You're done piecing together email tips from five different places and want one complete system.</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>You want your list to convert right-fit subscribers into buyers — not just collect names and sit there.</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>You're building visibility on Instagram, LinkedIn, a podcast, or through ads — and want it to turn into sales.</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>You've been ghosting your list, winging it, or sending without a real strategy — and you're ready to change that.</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>You want to stop relying on launches, referrals, or DM conversations as your only way to close a sale.</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>You're in this for the long game — you want the skill, not just a template, because you plan to keep selling for years.</li>
+      </ul>
+      <div class="notfit"><b>This is not the right fit if</b> you don't have an offer yet, you're not willing to show up and do the work, or you're looking for someone to write your emails for you.</div>
+      <div class="center-cta"><a href="https://scaleyourresonance.thrivecart.com/best-seller/" class="btn">Join Best Seller</a></div>
     </div>
-    <div class="center-cta"><a href="https://scaleyourresonance.thrivecart.com/best-seller/" class="btn">Join Best Seller</a></div>
   </div>
 </section>
 
-<!-- ═══ 15. FAQ (white) ═══ -->
-<section class="bg-white">
+<!-- 15. FAQ (daisy, circle +/-) -->
+<section class="bg-daisy">
   <div class="wrap">
-    <div class="sec-head"><h2>Questions, <span class="hl">answered</span>.</h2></div>
+    <div class="sec-head"><h2 class="pe">Questions, <span class="o">answered</span>.</h2></div>
     <div class="faq">
       <details open><summary>Is this right for me? How do I know? <span class="pm">+</span></summary><p>DM me on Instagram (@scaleyourresonance) or reply to any of my emails. No pitch, no pressure — just an honest conversation. Give me a few hours. 🫶</p></details>
       <details><summary>What programs, products, and services does this work for? <span class="pm">+</span></summary><p>All of them. Group programs, 1:1 coaching, done-for-you services, retainers, courses, memberships, digital products. High-ticket and low-ticket — I've sold offers from $28 to $9,000 with this exact system. B2B and B2C. I've worked with clients across health, wellness, money, relationships, marketing, design, and systems.</p></details>
-      <details><summary>Do I need a big list? <span class="pm">+</span></summary><p>Nope. This has worked for lists as small as 50 subscribers. List size matters way less than what you're doing with it — and you'll grow your list inside the program. That's what SUBSCRIBE is for.</p></details>
+      <details><summary>Do I need a big list? <span class="pm">+</span></summary><p>Nope. This has worked for lists as small as 50 subscribers. List size matters way less than what you're doing with it — and you'll grow your list inside the program. That's what Subscribe is for.</p></details>
       <details><summary>I've literally never made an email sale. Is this for me? <span class="pm">+</span></summary><p>Yes — this is exactly where to start. Multiple people inside Best Seller made their first email sale during the program.</p></details>
       <details><summary>What do I need before I join? <span class="pm">+</span></summary><p>At least one program, product, or service you're already selling, and some subscribers (even 50 is fine). If you're starting from zero, you'll also need one visibility channel where you can promote your lead magnet.</p></details>
       <details><summary>When are the calls? <span class="pm">+</span></summary><p>Two time slots per month: 1 PM PST / 4 PM EST / 8 PM GMT and 8 AM PST / 11 AM EST / 3 PM GMT. All US time zones covered. Best Seller has members across 8 countries — and yes, we made the times work for the Australians too. 😂 Can't make it live? Full replay hub, private podcast feed, and Slack support have you covered.</p></details>
@@ -719,9 +658,8 @@ footer .disc p+p{margin-top:10px}
   </div>
 </section>
 
-<!-- ═══ 16. FINAL CTA (daisy) ═══ -->
-<section class="bg-daisy final">
-  <div class="arch"></div>
+<!-- 16. FINAL CTA (peony) -->
+<section class="bg-peony final">
   <div class="wrap">
     <h2>Turn your list into your <span class="o">Best Seller</span>.</h2>
     <p>No more guessing. No more ghosting your list. No more crossing your fingers every time you hit send. Build the email strategy that makes consistent sales inevitable.</p>
